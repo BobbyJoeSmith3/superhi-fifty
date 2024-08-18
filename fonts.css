@@ -13,6 +13,9 @@
 }
 
 
-.marquee {
+.marquee,
+.lunch-medium,
+.date,
+.lineup h2 {
   font-family: 'LunchType-Medium', sans-serif;
 }

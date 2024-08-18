@@ -125,3 +125,40 @@ body {
 .difference {
   mix-blend-mode: difference;
 }
+
+.day-1 {
+  background-color: #FD76A7;
+}
+
+.day-2 {
+  background-color: #1BB190;
+}
+
+.day-3 {
+  background-image: url(assets/images/day-3.jpg);
+}
+
+.lineup {
+  text-align: center;
+}
+
+.lineup h2 {
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.date {
+  font-size: 28px;
+  color: #FFEECF;
+  margin-bottom: 48px;
+  line-height: 1;
+}
+
+.lineup p {
+  font-size: 21px;
+}
+
+.lineup li {
+  margin-bottom: 24px;
+}
