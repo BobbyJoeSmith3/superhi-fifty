@@ -141,6 +141,7 @@ body {
 .day {
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
 .day .container {

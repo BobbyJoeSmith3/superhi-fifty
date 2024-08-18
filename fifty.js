@@ -38,3 +38,19 @@ circles.forEach(function(circle, index) {
     );
 })
 
+const squiggles = document.querySelectorAll('.squiggle');
+
+squiggles.forEach(function(squiggle, index) {
+    squiggle.animate(
+        [
+            { transform: 'rotate(0deg)'},
+            { transform: 'rotate(30deg)'},
+            { transform: 'rotate(0deg)'}
+        ],
+        {
+            delay: 300 * index,
+            duration: 3000,
+            iterations: Infinity
+        }
+    )
+})
