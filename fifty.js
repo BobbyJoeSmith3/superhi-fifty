@@ -15,6 +15,11 @@ function makeMarquee () {
 
 makeMarquee();
 
+
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // grab all of the .circles from the html
 const circles = document.querySelectorAll('.circle')
 
@@ -41,15 +46,20 @@ circles.forEach(function(circle, index) {
 const squiggles = document.querySelectorAll('.squiggle');
 
 squiggles.forEach(function(squiggle, index) {
+    // gets a random number between 0 and 45 using our random function generator from stack overflow
+    const randomNumber = random(0, 45);
+    // create a bit of randomness for animation delay
+    const randomDelay = random(0, 3000);
+
     squiggle.animate(
         [
             { transform: 'rotate(0deg)'},
-            { transform: 'rotate(30deg)'},
+            { transform: 'rotate(' + randomNumber + 'deg)'},
             { transform: 'rotate(0deg)'}
         ],
         {
-            delay: 300 * index,
-            duration: 3000,
+            delay: randomDelay,
+            duration: 5000,
             iterations: Infinity
         }
     )
