@@ -138,6 +138,17 @@ body {
   background-image: url(assets/images/day-3.jpg);
 }
 
+.day {
+  position: relative;
+  text-align: center;
+}
+
+.day .container {
+  /* force content to display on top of shape background */
+  position: relative;
+  z-index: 2;
+}
+
 .lineup {
   text-align: center;
 }
