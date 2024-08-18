@@ -15,33 +15,26 @@ function makeMarquee () {
 
 makeMarquee();
 
+// grab all of the .circles from the html
+const circles = document.querySelectorAll('.circle')
 
-document.querySelectorAll('.shape').forEach(function(shape) {
-    shape.animate(
-    [
-        // keyframes
-        { transform: 'scale(1)' },
-        { transform: 'scale(1.2)' },
-        { transform: 'scale(1)' }
-    ],
-    {
-        // timing options
-        duration: 3000,
-        iterations: Infinity,
-    },
+// loop through circles array and apply animation
+circles.forEach(function(circle, index) {
+    circle.animate(
+        [
+            // keyframes
+            { transform: 'scale(1)' },
+            { transform: 'scale(1.2)' },
+            { transform: 'scale(1)' }
+        ],
+        {
+            // timing options
+            // index is the position of the element in the circle array
+            // timing is in miliseconds, multiply by each element's unique index number
+            delay: 300 * index,
+            duration: 3000,
+            iterations: Infinity
+        }
     );
 })
 
-// document.querySelector('.shape').animate(
-//     [
-//         // keyframes
-//         { transform: 'scale(1)' },
-//         { transform: 'scale(1.2)' },
-//         { transform: 'scale(1)' }
-//     ],
-//     {
-//         // timing options
-//         duration: 3000,
-//         iterations: Infinity,
-//     },
-// );
