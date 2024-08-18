@@ -16,7 +16,8 @@ function makeMarquee () {
 makeMarquee();
 
 
-function random(min, max) {
+
+const random = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -24,7 +25,7 @@ function random(min, max) {
 const circles = document.querySelectorAll('.circle')
 
 // loop through circles array and apply animation
-circles.forEach(function(circle, index) {
+circles.forEach((circle, index) => {
     circle.animate(
         [
             // keyframes
@@ -45,7 +46,7 @@ circles.forEach(function(circle, index) {
 
 const squiggles = document.querySelectorAll('.squiggle');
 
-squiggles.forEach(function(squiggle, index) {
+squiggles.forEach((squiggle, index) => {
     // gets a random number between 0 and 45 using our random function generator from stack overflow
     const randomNumber = random(0, 45);
     // create a bit of randomness for animation delay
