@@ -14,3 +14,34 @@ function makeMarquee () {
 }
 
 makeMarquee();
+
+
+document.querySelectorAll('.shape').forEach(function(shape) {
+    shape.animate(
+    [
+        // keyframes
+        { transform: 'scale(1)' },
+        { transform: 'scale(1.2)' },
+        { transform: 'scale(1)' }
+    ],
+    {
+        // timing options
+        duration: 3000,
+        iterations: Infinity,
+    },
+    );
+})
+
+// document.querySelector('.shape').animate(
+//     [
+//         // keyframes
+//         { transform: 'scale(1)' },
+//         { transform: 'scale(1.2)' },
+//         { transform: 'scale(1)' }
+//     ],
+//     {
+//         // timing options
+//         duration: 3000,
+//         iterations: Infinity,
+//     },
+// );
