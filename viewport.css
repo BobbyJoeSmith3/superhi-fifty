@@ -1,0 +1,16 @@
+
+/* running viewport transitions only on wider screens by using a media query because sometimes scrolling triggers on a mobile device can be a bit flaky */
+@media (min-width: 640px) {
+    .shape,
+    .lineup li,
+    .date {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .in-viewport .shape,
+    .in-viewport .lineup li,
+    .in-viewport .date {
+        opacity: 1;
+    }
+}

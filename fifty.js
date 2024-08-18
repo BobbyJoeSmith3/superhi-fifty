@@ -50,12 +50,12 @@ squiggles.forEach((squiggle, index) => {
     // gets a random number between 0 and 45 using our random function generator from stack overflow
     const randomNumber = random(0, 45);
     // create a bit of randomness for animation delay
-    const randomDelay = random(0, 3000);
+    const randomDelay = random(0, 2000);
 
     squiggle.animate(
         [
             { transform: 'rotate(0deg)'},
-            { transform: 'rotate(' + randomNumber + 'deg)'},
+            { transform: `rotate(${randomNumber}deg)`},
             { transform: 'rotate(0deg)'}
         ],
         {
@@ -65,3 +65,20 @@ squiggles.forEach((squiggle, index) => {
         }
     )
 })
+
+
+// detect when an element is in-view in the viewport
+// when .section enters the viewport add class 'in-viewport'
+// when it exits remove class 'in-viewport'
+inView('.section')
+    .on('enter', section => {
+        // classList.add is the same as jQuery's .addClass() method
+        section.classList.add('in-viewport')
+    })
+    .on('exit', section => {
+        section.classList.remove('in-viewport')
+    });
+
+
+// set the class to add only once we have scrolled 20% of our section into the viewport
+inView.threshold(0.2)
