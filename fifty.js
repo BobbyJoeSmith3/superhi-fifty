@@ -81,4 +81,25 @@ inView('.section')
 
 
 // set the class to add only once we have scrolled 20% of our section into the viewport
-inView.threshold(0.2)
+inView.threshold(0.2);
+
+
+// 1. select each section on the page and loop through them
+// 2. in each section we want to grab the artists and shapes
+// 3. add transition and delay effects for both artists and shapes
+// 4. make shapes fade in only after the artists
+
+const sections = document.querySelectorAll('.section');
+
+sections.forEach((section, index) => {
+    // use querySelectorAll on our 'section' to only find elements 
+    // inside of our section vs. entire document
+    const artists = section.querySelectorAll('.lineup li');
+    const shapes = section.querySelectorAll('.shape');
+
+    artists.forEach((artist, index) => {
+        const delay = index * 100;
+        artist.style.transitionDelay = `${delay}ms`;
+    })
+
+})
