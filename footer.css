@@ -36,6 +36,24 @@
 
 .register h2 {
     font-size: 40px;
+    margin-bottom: 48px;
+}
+
+.sign-up {
+    display: flex;
+    border-bottom: solid 2px #00B290;
+    padding-bottom: 12px;
+}
+
+input {
+    background: none;
+    border: none;
+    font-size: 21px;
+}
+
+.email-input {
+    /* make input stretch out and fill available space */
+    flex: 1;
 }
 
 .form {

@@ -18,6 +18,7 @@
 .date,
 .lineup h2,
 .button,
-.register h2 {
+.register h2,
+.submit {
   font-family: 'LunchType-Medium', sans-serif;
 }
