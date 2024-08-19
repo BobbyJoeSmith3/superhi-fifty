@@ -174,3 +174,21 @@ body {
 .lineup li {
   margin-bottom: 24px;
 }
+
+.scroll-to {
+  position: absolute;
+  left: 50%;
+  /* offset by half of the width of the object */
+  transform: translateX(-50%);
+  bottom: 3vh;
+  width: 64px;
+  height: 32px;
+  background-image: url(assets/images/down-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.scroll-to-intro {
+  background-image: url(assets/images/down-arrow-light.svg);
+}
