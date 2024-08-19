@@ -102,4 +102,10 @@ sections.forEach((section, index) => {
         artist.style.transitionDelay = `${delay}ms`;
     })
 
+    shapes.forEach((shape, index) => {
+        // only start once all of the artists have faded in using the .length property
+        const delay = (artists.length + index) * 100;
+        shape.style.transitionDelay = `${delay}ms`;
+    })
+
 })
