@@ -109,3 +109,23 @@ sections.forEach((section, index) => {
     })
 
 })
+
+// 1. run a function on click of a .js-scroll link
+// 2. stop the link from jumping straight to our section (its default behavior)
+// 3. find out the href attribute and then grab that element
+// 4. scroll to it using scroll into view
+
+const scrollLinks = document.querySelectorAll('.js-scroll');
+
+scrollLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        // prevent default browser jump to link
+        event.preventDefault();
+        // get href of link
+        const href = link.getAttribute('href');
+        // smoothly scroll to link's href
+        document.querySelector(href).scrollIntoView({
+            behavior: 'smooth'
+        })
+    })
+})
