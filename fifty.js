@@ -118,6 +118,7 @@ sections.forEach((section, index) => {
 const scrollLinks = document.querySelectorAll('.js-scroll');
 
 scrollLinks.forEach(link => {
+    // using the event keyword we get access to a snapshot of what happened when link was clicked
     link.addEventListener('click', (event) => {
         // prevent default browser jump to link
         event.preventDefault();
