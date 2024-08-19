@@ -29,3 +29,36 @@
     text-align: center;
     text-decoration: none;
 }
+
+.register .container {
+    display: flex;
+}
+
+.register h2 {
+    font-size: 40px;
+}
+
+.form {
+    margin: 48px 24px;
+}
+
+.eyes {
+    width: 108px;
+    height: 32px;
+    background-image: url(assets/images/eyes_open.svg);
+}
+
+.hand {
+    width: 57px;
+    height: 89px;
+    background-image: url(assets/images/ok_hand.svg);
+    /* this aligns the hand to the bottom of its container */
+    align-self: flex-end;
+}
+
+.eyes,
+.hand {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
